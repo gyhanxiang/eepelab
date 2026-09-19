@@ -27,7 +27,7 @@ jobs:
           set -euo pipefail
           mkdir -p _site
           cp index.html _site/index.html
-          grep -q "EEPE Lab" _site/index.html
+          grep -Eq "EEPE Lab|regent_zju_lab" _site/index.html
           touch _site/.nojekyll
 
       - name: Configure Pages
