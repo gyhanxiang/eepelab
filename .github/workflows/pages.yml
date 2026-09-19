@@ -26,9 +26,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site
-          curl --fail --silent --show-error --location \
-            "https://jvpnewlknnbvagdkxnsk.supabase.co/storage/v1/object/public/lab-equipment-web/index.html" \
-            --output _site/index.html
+          cp index.html _site/index.html
           grep -q "EEPE Lab" _site/index.html
           touch _site/.nojekyll
 
